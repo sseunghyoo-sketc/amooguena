@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이승효 | 국민대학교 건설시스템공학부 CM 연구실 석사과정 예정자</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Noto Sans KR & Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kmu: {
+                            dark: '#0A1931',   /* 깊고 신뢰감 있는 국민대 대표 블루 매칭 */
+                            blue: '#15305B',   /* 국민대 공식 다크블루 */
+                            light: '#EAF2F8',  /* 부드러운 블루 틴트 배경 */
+                            cyan: '#00F5FF',   /* 스마트 테크니컬 사이언 블루 (강조색) */
+                            accent: '#3B82F6'  /* 신뢰성을 표현하는 보조 블루 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0A1931 0%, #15305B 50%, #1D4ED8 100%);
+        }
+        .skill-bar-fill {
+            transition: width 1.5s ease-in-out;
+        }
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur shadow-sm z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center space-x-2">
+                        <span class="w-3 h-3 bg-kmu-accent rounded-full animate-pulse"></span>
+                        <span class="font-bold text-lg text-kmu-dark tracking-tight">KMU CM & AI LAB | 이승효</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-600 hover:text-kmu-accent transition">소개</a>
+                    <a href="#research" class="text-sm font-medium text-slate-600 hover:text-kmu-accent transition">연구분야</a>
+                    <a href="#projects" class="text-sm font-medium text-slate-600 hover:text-kmu-accent transition">연구과제</a>
+                    <a href="#skills" class="text-sm font-medium text-slate-600 hover:text-kmu-accent transition">연구역량</a>
+                    <a href="#cv" class="text-sm font-medium text-slate-600 hover:text-kmu-accent transition">학업이력</a>
+                    <a href="https://padlet.com/sseunghyoo/padlet-dyrd33d8m5ai78c5" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-600 hover:text-kmu-accent transition flex items-center gap-1">
+                        방명록 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                    <a href="#contact" class="px-4 py-2 text-sm font-medium text-white bg-kmu-blue rounded-lg hover:bg-kmu-dark transition">컨택하기</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-kmu-accent focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-1">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-kmu-accent">소개</a>
+            <a href="#research" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-kmu-accent">연구분야</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-kmu-accent">연구과제</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-kmu-accent">연구역량</a>
+            <a href="#cv" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-kmu-accent">학업이력</a>
+            <a href="https://padlet.com/sseunghyoo/padlet-dyrd33d8m5ai78c5" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-kmu-accent">
+                방명록 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-kmu-blue hover:bg-kmu-dark text-center">컨택하기</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-28 pb-20 md:pt-36 md:pb-28 gradient-bg text-white relative overflow-hidden">
+        <!-- 배경 그래픽 장치 -->
+        <div class="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,#0F3B7A_1px,transparent_1px),linear-gradient(to_bottom,#0F3B7A_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- 소개 텍스트 -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex flex-wrap items-center gap-2 bg-blue-500/20 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider text-blue-200 border border-blue-400/30">
+                        <i class="fa-solid fa-brain text-kmu-cyan animate-pulse"></i>
+                        <span>21학번 학사 졸업 (2027.02 예정)</span>
+                        <span class="text-blue-400">|</span>
+                        <span>석사과정 진학 예정 (2027.03)</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                        건설관리(CM)와 AI의 융합으로 <br>
+                        <span class="text-kmu-cyan">지능형 건설 시스템</span>을 구축하는 이승효입니다
+                    </h1>
+                    <p class="text-lg text-blue-100 max-w-xl font-light leading-relaxed">
+                        안녕하세요, 국민대학교 건설시스템공학부 <strong class="font-bold text-white">건설관리(CM) 연구실</strong> 석사 예비 연구원 <strong class="font-bold text-white">이승효</strong>입니다. 학부에서 단단히 다져온 PM 도메인 이론과 지능형 알고리즘 제어 기법을 결합하여, 건설 리스크를 실시간 진단하는 최첨단 통합 솔루션 연구를 준비하고 있습니다.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#about" class="px-6 py-3 bg-white text-kmu-dark font-semibold rounded-lg shadow-md hover:bg-blue-50 transition flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-user"></i> 프로필 자세히 보기
+                        </a>
+                        <a href="#contact" class="px-6 py-3 bg-transparent border-2 border-white/30 hover:border-white text-white font-semibold rounded-lg hover:bg-white/5 transition flex items-center gap-2 text-sm">
+                            <i class="fa-regular fa-envelope"></i> 연구 미팅 및 컨택하기
+                        </a>
+                    </div>
+                </div>
+                <!-- 프로필 이미지 데코레이션 프레임 (대화형 업로더 결합) -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 group">
+                        <div class="absolute inset-0 bg-blue-500/10 rounded-full animate-ping"></div>
+                        <div class="absolute -inset-4 border border-dashed border-kmu-cyan/30 rounded-full animate-[spin_25s_linear_infinite]"></div>
+                        <div class="absolute inset-2 bg-gradient-to-tr from-kmu-dark to-blue-950 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl flex items-center justify-center">
+                            <img id="profile-hero-img" src="./KakaoTalk_20260525_222648703_2.jpg" alt="이승효 연구원 프로필 사진" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://placehold.co/400x400/0A1931/ffffff?text=Lee+Seung+Hyo';">
+                        </div>
+                        <!-- 로컬 가상 업로드 도구 오버레이 -->
+                        <div onclick="triggerImageUpload('hero')" class="absolute bottom-3 right-3 bg-kmu-cyan text-kmu-dark w-12 h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition group-hover:animate-bounce" title="클릭하여 프로필 사진 파일 직접 업로드">
+                            <i class="fa-solid fa-camera text-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-kmu-accent tracking-widest uppercase mb-2">About Me</h2>
+                <p class="text-3xl font-bold text-slate-900">도메인과 스마트 기술의 경계를 잇는 열정</p>
+                <div class="w-12 h-1 bg-kmu-accent mx-auto mt-4 rounded"></div>
+                <!-- 실시간 사진 로딩 안내 팁 메세지 -->
+                <p class="text-xs text-slate-400 mt-4 bg-slate-50 inline-block px-3 py-1.5 rounded-full border border-dashed border-slate-200">
+                    💡 로컬 환경에서 프로필 사진이 안 보인다면? 사진 옆의 <strong class="text-kmu-blue font-bold">카메라 아이콘</strong>을 클릭해 컴퓨터 속 실제 이미지 파일을 업로드해 보세요!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- 왼쪽: 상세 프로필 및 학술 정보 카드 -->
+                <div class="lg:col-span-5 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between hover-lift relative group">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <!-- 자기소개 미니 프로필 프레임 -->
+                            <div class="relative w-20 h-20 rounded-xl overflow-hidden border-2 border-kmu-accent/20 flex-shrink-0">
+                                <img id="profile-sub-img" src="./KakaoTalk_20260525_222648703.jpg" alt="이승효 프로필 미니" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://placehold.co/100x100/0A1931/ffffff?text=LSH';">
+                                <div onclick="triggerImageUpload('sub')" class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white cursor-pointer" title="미니 프로필 사진 교체">
+                                    <i class="fa-solid fa-camera text-xs"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">이승효 <span class="text-sm font-normal text-slate-500">(21학번)</span></h3>
+                                <p class="text-xs text-kmu-accent font-semibold mt-1">건설시스템공학부 학사 졸업 (2027.02 예정)</p>
+                                <p class="text-xs text-slate-500">CM연구실 석사과정 입학 (2027.03 예정)</p>
+                            </div>
+                        </div>
+                        
+                        <hr class="border-slate-200">
+                        
+                        <div class="space-y-4 text-sm text-slate-600">
+                            <div>
+                                <p class="font-semibold text-slate-800">학업 정보 및 평점평균 (GPA)</p>
+                                <p class="text-lg font-bold text-kmu-blue mt-0.5">4.15 <span class="text-xs text-slate-400 font-normal">/ 4.5</span></p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-800">주요 실적 수강 과목</p>
+                                <div class="flex flex-wrap gap-1.5 mt-2">
+                                    <span class="px-2 py-0.5 bg-white border text-xs rounded-md text-slate-700">건설공정및공사비관리 (A+)</span>
+                                    <span class="px-2 py-0.5 bg-white border text-xs rounded-md text-slate-700">건설엔지니어링론 (A+)</span>
+                                    <span class="px-2 py-0.5 bg-white border text-xs rounded-md text-slate-700">인공지능기초 (A0)</span>
+                                    <span class="px-2 py-0.5 bg-white border text-xs rounded-md text-slate-700">확률및통계학 (A+)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 중앙: 연구 목표 및 지향점 -->
+                <div class="lg:col-span-4 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between hover-lift">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-kmu-light rounded-xl flex items-center justify-center text-kmu-blue text-xl">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Research Objective</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            급변하는 건설 환경에서 데이터의 힘은 곧 의사결정의 신뢰도와 결부됩니다. 
+                        </p>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            저는 PM 도메인의 고유 지식(EVMS, 자원 관리 기법)에 머신러닝의 수치 추론 능력을 덧씌워, 공기 단축과 리스크 회피를 통계학적으로 완벽히 설명해내는 정량 가시화 연구의 마일스톤을 세우겠습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 오른쪽: 핵심 연구 강점 요약 -->
+                <div class="lg:col-span-3 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between hover-lift">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-kmu-light rounded-xl flex items-center justify-center text-kmu-blue text-xl">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Core Assets</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-regular fa-circle-check text-kmu-accent mt-1 text-sm"></i>
+                                <div>
+                                    <h4 class="font-semibold text-xs text-slate-800">PM & AI 융합 능력</h4>
+                                    <p class="text-[11px] text-slate-500">기초 수학 및 Python 기반 머신러닝 학습 모델 구현</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-regular fa-circle-check text-kmu-accent mt-1 text-sm"></i>
+                                <div>
+                                    <h4 class="font-semibold text-xs text-slate-800">CM 학부인턴 프로젝트 수련</h4>
+                                    <p class="text-[11px] text-slate-500">지연 요소 전처리 및 DB 관리 기초 경험</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-regular fa-circle-check text-kmu-accent mt-1 text-sm"></i>
+                                <div>
+                                    <h4 class="font-semibold text-xs text-slate-800">4D/5D 시뮬레이션</h4>
+                                    <p class="text-[11px] text-slate-500">BIM 데이터 연계를 통한 자율 시공 설계 실무</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 이미지 수동 업로드를 위한 히든 파일 인풋 선언 -->
+    <input type="file" id="hero-image-input" accept="image/*" class="hidden" onchange="handleImageFileSelected(this, 'hero')">
+    <input type="file" id="sub-image-input" accept="image/*" class="hidden" onchange="handleImageFileSelected(this, 'sub')">
+
+    <!-- Research Interests Section -->
+    <section id="research" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-kmu-accent tracking-widest uppercase mb-2">Research Statement</h2>
+                <p class="text-3xl font-bold text-slate-900">석사과정 주요 연구 관심 주제</p>
+                <p class="text-slate-500 mt-2 text-sm">이승효 연구원이 주도적으로 도전하고자 하는 스마트 PM 아젠다입니다.</p>
+                <div class="w-12 h-1 bg-kmu-accent mx-auto mt-4 rounded"></div>
+            </div>
+
+            <!-- 아코디언 구조 연구 주제 목록 -->
+            <div class="max-w-4xl mx-auto space-y-4">
+                
+                <!-- 주제 1 -->
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition" onclick="toggleAccordion('acc1')">
+                        <div class="flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-blue-100 text-kmu-blue flex items-center justify-center font-bold text-sm">01</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-base md:text-lg">AI 기반 공사비 및 공정 리스크 예측</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">역사적(Historical) 실적 공사비 데이터를 머신러닝 모델에 학습시켜 오차 최소화</p>
+                            </div>
+                        </div>
+                        <i id="acc1-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc1" class="hidden px-6 pb-6 pt-2 border-t border-slate-100 text-sm text-slate-600 leading-relaxed space-y-3">
+                        <p>
+                            건설 프로젝트 초기 단계에서 공사비 및 공기 설정은 성공 여부를 가르는 열쇠입니다. 기왕 구축된 다양한 조달청 및 공사 실적 빅데이터를 기반으로, 다중회귀(Multiple Regression), Random Forest, 그리고 LSTM 모델을 구성해 시계열 리스크 인자를 반영한 정밀 예측 프레임워크를 개발하고 싶습니다.
+                        </p>
+                        <div class="bg-slate-50 p-3 rounded-lg border text-xs text-kmu-blue font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-tag"></i> <span>주요 키워드: Machine Learning, Predict Cost Overruns, Time-series Risk Analysis, Regression Model</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 주제 2 -->
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition" onclick="toggleAccordion('acc2')">
+                        <div class="flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-blue-100 text-kmu-blue flex items-center justify-center font-bold text-sm">02</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-base md:text-lg">LLM(대형언어모델)을 활용한 계약서 및 클레임 문서 분석</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">방대한 분량의 국제 표준 계약서(FIDIC 등) 리스크 감지 자동화</p>
+                            </div>
+                        </div>
+                        <i id="acc2-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc2" class="hidden px-6 pb-6 pt-2 border-t border-slate-100 text-sm text-slate-600 leading-relaxed space-y-3">
+                        <p>
+                            해외 건설 및 대형 엔지니어링 프로젝트의 계약 조건 검토 시 인적 자원에 대한 의존도가 높아 사고나 오역으로 인한 중대 손실이 빈번합니다. RAG(검색 증강 생성) 기법과 특화 LLM을 연동하여 독소 조항, 법적 면책 요건을 조기에 파싱(Parsing)하고, 리스크 지수를 수치화하는 자동화 솔루션 연구를 구상 중입니다.
+                        </p>
+                        <div class="bg-slate-50 p-3 rounded-lg border text-xs text-kmu-blue font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-tag"></i> <span>주요 키워드: Large Language Model (LLM), RAG, Construction Claims, Contract Risk Mining, NLP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 주제 3 -->
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition" onclick="toggleAccordion('acc3')">
+                        <div class="flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-blue-100 text-kmu-blue flex items-center justify-center font-bold text-sm">03</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-base md:text-lg">Computer Vision 기반 건설 현장 안전 및 생산성 관제</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">객체 인식 모델을 활용한 중장비 점유 시간 및 근로자 안전장구 미착용 검출</p>
+                            </div>
+                        </div>
+                        <i id="acc3-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc3" class="hidden px-6 pb-6 pt-2 border-t border-slate-100 text-sm text-slate-600 leading-relaxed space-y-3">
+                        <p>
+                            건설 현장 생산성을 측정하기 위한 원거리 영상 소스를 활용하여 중장비(굴착기, 덤프트럭 등)의 사이클 타임(Cycle Time)을 알고리즘으로 측정하는 연구를 추진하고자 합니다. 더불어, 실시간 안전 기준 위반 객체를 레이아웃 맵에 추적 매핑해 공사 관리자에게 시각적 경보 피드를 발송하는 스마트 관제를 달성하고자 합니다.
+                        </p>
+                        <div class="bg-slate-50 p-3 rounded-lg border text-xs text-kmu-blue font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-tag"></i> <span>주요 키워드: YOLO Object Detection, Productivity Measurement, Worker Safety Monitoring, Video Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold text-kmu-accent tracking-widest uppercase mb-2">Research Portfolios</h2>
+                <p class="text-3xl font-bold text-slate-900">수행 완료 및 진행 중인 연구 프로젝트</p>
+                <p class="text-slate-500 mt-2 text-sm">PM과 AI 역량이 조화롭게 어우러진 이승효 연구원의 프로젝트 이력입니다.</p>
+                <div class="w-12 h-1 bg-kmu-accent mx-auto mt-4 rounded"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex justify-center flex-wrap gap-2 mb-10">
+                <button onclick="filterProjects('all')" id="btn-all" class="filter-btn px-4 py-2 text-xs font-semibold rounded-full bg-kmu-blue text-white transition">전체보기</button>
+                <button onclick="filterProjects('pm')" id="btn-pm" class="filter-btn px-4 py-2 text-xs font-semibold rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 transition">프로젝트관리 (PM)</button>
+                <button onclick="filterProjects('ai')" id="btn-ai" class="filter-btn px-4 py-2 text-xs font-semibold rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 transition">인공지능 (AI)</button>
+                <button onclick="filterProjects('bim')" id="btn-bim" class="filter-btn px-4 py-2 text-xs font-semibold rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 transition">BIM & 시뮬레이션</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                
+                <!-- Project 1 (PM) -->
+                <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col hover-lift" data-category="pm">
+                    <div class="h-48 bg-slate-900 relative overflow-hidden flex items-center justify-center text-slate-400">
+                        <i class="fa-solid fa-chart-gantt text-6xl opacity-30 text-kmu-cyan"></i>
+                        <span class="absolute top-3 left-3 bg-kmu-blue text-white text-xs font-bold px-2 py-1 rounded">PM / 공정해석</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-slate-400 font-medium">학부 캡스톤 우수 연구과제</span>
+                            <h3 class="font-bold text-lg text-slate-900 mt-1 mb-3">Monte Carlo Simulation을 활용한 기후조건 기반 건축 공기 지연 확률론적 리스크 분석</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                기상청 10개년 기온/강수량 데이터를 연동하여 우천 및 한파로 인한 작업 불가능 일수를 정량 계산하고, CPM 공정표의 Critical Path에 대한 총 공기 지연 확률 분포 모델을 수립했습니다.
+                            </p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex flex-wrap gap-1">
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-semibold px-2 py-0.5 rounded">MCS 모델링</span>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-semibold px-2 py-0.5 rounded">Critical Path Method</span>
+                            </div>
+                            <button onclick="openModal('project-detail-1')" class="text-xs font-bold text-kmu-accent flex items-center gap-1 hover:underline">
+                                상세 연구 결과 보기 <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 (AI) -->
+                <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col hover-lift" data-category="ai">
+                    <div class="h-48 bg-slate-900 relative overflow-hidden flex items-center justify-center text-slate-400">
+                        <i class="fa-solid fa-brain text-6xl opacity-30 text-kmu-cyan"></i>
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded">AI / 데이터분석</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-slate-400 font-medium">자율 인공지능 공학경진대회</span>
+                            <h3 class="font-bold text-lg text-slate-900 mt-1 mb-3">YOLOv10을 접목한 현장 CCTV 무인 드론 영상 기반 중장비 사이클 타임 및 생산성 자동 예측</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                토공사 현장에 대형 장비를 자동 감지하여 휴지 시간(Idle Time)을 계산했습니다. 실제 작업 상태와 대기 상태를 실시간 매핑하여 현장 실질 생산성을 정형화하는 AI 파이프라인을 설계했습니다.
+                            </p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex flex-wrap gap-1">
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-semibold px-2 py-0.5 rounded">YOLOv10</span>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-semibold px-2 py-0.5 rounded">OpenCV Tracking</span>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-semibold px-2 py-0.5 rounded">Python</span>
+                            </div>
+                            <button onclick="openModal('project-detail-2')" class="text-xs font-bold text-kmu-accent flex items-center gap-1 hover:underline">
+                                상세 연구 결과 보기 <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 (BIM) -->
+                <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col hover-lift" data-category="bim">
+                    <div class="h-48 bg-slate-900 relative overflow-hidden flex items-center justify-center text-slate-400">
+                        <i class="fa-solid fa-cubes text-6xl opacity-30 text-kmu-cyan"></i>
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">BIM / 가상시공</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-slate-400 font-medium">BIM 응용 실무 과제</span>
+                            <h3 class="font-bold text-lg text-slate-900 mt-1 mb-3">Revit 3D 모델과 유전 알고리즘 기반의 다세대 주택 모듈러 공정 최적화 4D/5D 통합 시뮬레이션</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                시공 단계별 유연성 및 부재 생산-운송 시나리오를 통합 구축하여 최단 경로 기반 시공 일정 최적화 모델을 수립했습니다. 전통적 일정 대비 설계 오버헤드를 약 11% 감축했습니다.
+                            </p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex flex-wrap gap-1">
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-semibold px-2 py-0.5 rounded">Autodesk Revit</span>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-semibold px-2 py-0.5 rounded">Navisworks 4D</span>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-semibold px-2 py-0.5 rounded">GA Optimization</span>
+                            </div>
+                            <button onclick="openModal('project-detail-3')" class="text-xs font-bold text-kmu-accent flex items-center gap-1 hover:underline">
+                                상세 연구 결과 보기 <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Skills & Software Section -->
+    <section id="skills" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-kmu-accent tracking-widest uppercase mb-2">Research Tech Stack</h2>
+                <p class="text-3xl font-bold text-slate-900">보유 스마트 엔지니어링 및 AI 역량</p>
+                <div class="w-12 h-1 bg-kmu-accent mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- 역량 설명 텍스트 -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-900 leading-tight">연구실 과제 및 국가 연구 <br class="hidden sm:inline">세부 실무를 바로 서포트할 수 있는 도구 제어 숙련도</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        공정망 모델 분석과 인공지능 예측 모델링을 결합할 수 있는 균형 잡힌 기술 스택을 내재화했습니다. 학부 시절부터 수치 전처리 코딩 및 다차원 BIM 솔루션을 활용하여 주도적으로 연구를 계획해 왔습니다.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                            <span class="block text-2xl font-bold text-kmu-blue">4.15</span>
+                            <span class="text-xs text-slate-500 font-medium">학업 평점 평균 (GPA)</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                            <span class="block text-2xl font-bold text-kmu-blue">PyTorch</span>
+                            <span class="block text-xs text-slate-500 font-medium">AI 딥러닝 라이브러리 제어</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 실시간 숙련도 바 그래프 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center text-sm font-semibold text-slate-700 mb-1.5">
+                            <span>Python / PyTorch / Pandas (데이터 가공 및 머신러닝 학습)</span>
+                            <span class="text-kmu-blue">88%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="skill-bar-fill h-full bg-kmu-accent rounded-full" style="width: 88%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center text-sm font-semibold text-slate-700 mb-1.5">
+                            <span>Primavera P6 & MS Project (건설 공정망 자원 최적 배정 및 캘린더링)</span>
+                            <span class="text-kmu-blue">80%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="skill-bar-fill h-full bg-kmu-accent rounded-full" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center text-sm font-semibold text-slate-700 mb-1.5">
+                            <span>Autodesk Revit & Navisworks (BIM 데이터 4D 시공 매핑)</span>
+                            <span class="text-kmu-blue">75%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="skill-bar-fill h-full bg-kmu-accent rounded-full" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center text-sm font-semibold text-slate-700 mb-1.5">
+                            <span>R / SQL (공사 원자재 원가 시계열 분석 및 데이터베이스 관리)</span>
+                            <span class="text-kmu-blue">70%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="skill-bar-fill h-full bg-kmu-accent rounded-full" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-kmu-accent tracking-widest uppercase mb-2">Curriculum Vitae</h2>
+                <p class="text-3xl font-bold text-slate-900">학술 활동 및 연구 수련 여정</p>
+                <div class="w-12 h-1 bg-kmu-accent mx-auto mt-4 rounded"></div>
+            </div>
+
+            <!-- 타임라인 레이아웃 -->
+            <div class="max-w-4xl mx-auto relative border-l-2 border-slate-200 pl-6 sm:pl-8 space-y-12">
+                <!-- 타임라인 아이템 1 -->
+                <div class="relative">
+                    <span class="absolute -left-10 sm:-left-[44px] top-1 w-6 h-6 bg-kmu-blue border-4 border-white rounded-full shadow-md"></span>
+                    <div>
+                        <span class="inline-block bg-kmu-light text-kmu-blue text-xs font-bold px-2 py-0.5 rounded-full mb-1">2027.03 (예정)</span>
+                        <h4 class="font-bold text-slate-900 text-lg">국민대학교 대학원 건설시스템공학부 CM 연구실 석사과정 입학</h4>
+                        <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                            PM(프로젝트 관리) 이론과 차세대 기계학습 원천 기법을 결합하여 가상 엔지니어링 환경에서 시공 오류를 선제 탐지하는 연구 프로젝트 계획 중.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 타임라인 아이템 2 -->
+                <div class="relative">
+                    <span class="absolute -left-10 sm:-left-[44px] top-1 w-6 h-6 bg-kmu-blue border-4 border-white rounded-full shadow-md"></span>
+                    <div>
+                        <span class="inline-block bg-kmu-light text-kmu-blue text-xs font-bold px-2 py-0.5 rounded-full mb-1">2021.03 - 2027.02 (예정)</span>
+                        <h4 class="font-bold text-slate-900 text-lg">국민대학교 건설시스템공학부 학사 졸업 (21학번)</h4>
+                        <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                            건설재료 및 공정망 공학 정규 교과과정을 최우수로 인수. 평점평균 4.15/4.5를 성취하며 연구 역량에 근간이 되는 수학적 이론 수립.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 타임라인 아이템 3 -->
+                <div class="relative">
+                    <span class="absolute -left-10 sm:-left-[44px] top-1 w-6 h-6 bg-kmu-blue border-4 border-white rounded-full shadow-md"></span>
+                    <div>
+                        <span class="inline-block bg-kmu-light text-kmu-blue text-xs font-bold px-2 py-0.5 rounded-full mb-1">2026.03 - 현재</span>
+                        <h4 class="font-bold text-slate-900 text-lg">CM 연구실 학부생 연구 인턴 과정</h4>
+                        <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                            대학원 석박사 선배들과 공동으로 '건설 현장 생산성 관리를 위한 컴퓨터 비전 기반 트래킹 알고리즘 개발' 연구 보조 수행. 파이썬을 활용한 데이터 수치 연산 및 객체 트래킹 기본 설계 검증 담당.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 포트폴리오 PDF 다운로드 버튼 모사 -->
+            <div class="text-center mt-12">
+                <button onclick="downloadAlert()" class="inline-flex items-center gap-2 bg-slate-900 text-white font-semibold text-sm px-6 py-3 rounded-xl hover:bg-slate-800 shadow transition">
+                    <i class="fa-solid fa-file-pdf text-kmu-cyan"></i> 이승효 석사 진학용 학업 및 연구 계획서 다운로드 (PDF)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-kmu-accent tracking-widest uppercase mb-2">Contact Me</h2>
+                <p class="text-3xl font-bold text-slate-900">연구실 면담 및 지도교수님 연구 교류</p>
+                <p class="text-slate-500 mt-2 text-sm">진학 면담 또는 공동 연구 아이디어에 대해 소통해 주시면 즉시 회신하겠습니다.</p>
+                <div class="w-12 h-1 bg-kmu-accent mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xl grid grid-cols-1 md:grid-cols-5">
+                <!-- 연락 정보 -->
+                <div class="md:col-span-2 gradient-bg text-white p-8 sm:p-12 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold tracking-tight">CONTACT INFO</h3>
+                        <p class="text-sm text-blue-100 leading-relaxed">
+                            국민대학교 미래관 스마트 건설공정 해석실에 머무르며 머신러닝 학습 모델 개발에 집중하고 있습니다.
+                        </p>
+                        <ul class="space-y-4 text-sm text-blue-50 mt-8">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-envelope text-kmu-cyan"></i>
+                                <span class="break-all">lsh_cm_ai@kookmin.ac.kr</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-phone text-kmu-cyan"></i>
+                                <span>02-910-4114 (건설학부 CM연구동)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-map-location-dot text-kmu-cyan"></i>
+                                <span>서울시 성북구 정릉로 77 미래관 5층</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- SNS 링크 -->
+                    <div class="flex items-center space-x-4 mt-8 pt-6 border-t border-white/20">
+                        <a href="https://github.com" target="_blank" class="hover:text-kmu-cyan transition text-xl"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="hover:text-kmu-cyan transition text-xl"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-kmu-cyan transition text-xl"><i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </div>
+
+                <!-- 실시간 메일 전송 모사 폼 -->
+                <form id="contact-form" onsubmit="handleContactSubmit(event)" class="md:col-span-3 p-8 sm:p-12 space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">보내시는 분 이름</label>
+                            <input type="text" id="contact-name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:border-kmu-accent text-sm transition" placeholder="김교수">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">소속 (대학/연구소명)</label>
+                            <input type="text" id="contact-org" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:border-kmu-accent text-sm transition" placeholder="국민대학교 스마트인프라연구실">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">답신용 이메일 주소</label>
+                        <input type="email" id="contact-email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:border-kmu-accent text-sm transition" placeholder="professor@kookmin.ac.kr">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">문의 또는 메시지 내용</label>
+                        <textarea id="contact-message" required rows="4" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:border-kmu-accent text-sm transition" placeholder="석사과정 AI기반 공정리스크 과제 공동수행 논의를 위한 일정을 문의드립니다..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-kmu-blue hover:bg-kmu-dark text-white font-semibold py-3.5 rounded-lg transition flex items-center justify-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-paper-plane text-kmu-cyan"></i> 연구실 미팅 요청 메시지 발송
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-kmu-dark text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="text-sm font-semibold text-white">국민대학교 건설시스템공학부 CM 연구실 석사과정 예정자 이승효</p>
+            <p class="text-xs text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                본 웹포트폴리오는 건설사업관리(PM) 도메인과 최첨단 인공지능(AI) 응용 기술을 결합하여 고신뢰도 건설 생산 관리를 실증하려는 대학원 전공 예비생의 전용 연구 요약서입니다.
+            </p>
+            <div class="flex justify-center space-x-6 text-xs text-slate-600 pt-4">
+                <span>© 2026 Kookmin Univ Construction Management & AI Lab. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modals -->
+    <!-- Modal 1 -->
+    <div id="project-detail-1" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div class="p-6 sm:p-8 border-b border-slate-100 flex justify-between items-center">
+                <h3 class="font-bold text-xl text-slate-900">기후 데이터 연동 MCS 공기 지연 연구 프로세스</h3>
+                <button onclick="closeModal('project-detail-1')" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div class="p-6 sm:p-8 space-y-4 text-sm text-slate-600 leading-relaxed">
+                <p class="font-semibold text-kmu-accent text-base">연구 배경 및 상세 설계</p>
+                <p>전통적인 건설공기 일정 수립 시 고정된 상숫값을 바탕으로 여유 시간을 적용해 실효적 지연 발생을 방지하기 어렵습니다. 기상 환경은 주요 외부 교란 인자이므로, 몬테카를로 난수 생성 기법을 CPM에 연계하였습니다.</p>
+                
+                <p class="font-semibold text-kmu-accent text-base">적용 기법</p>
+                <ol class="list-decimal pl-5 space-y-1">
+                    <li>기상청 기후 빅데이터 다운로드 후 기상-작업 불가율 매핑 확률 밀도 함수 구축</li>
+                    <li>Primavera P6 상의 WBS 항목별 선/후행 연결망 구축</li>
+                    <li>Python 알고리즘을 이용한 10,000회 반복 확률 분포 통계분석 실행</li>
+                </ol>
+
+                <p class="font-semibold text-kmu-accent text-base">성과 및 함의</p>
+                <p>정적인 공기 계획 대비, 준공일 지수 지연 오차 범위를 85% 고신뢰도로 도출하여 공기 연장에 따른 지체상금 리스크 최소화 방안을 제안했습니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="project-detail-2" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div class="p-6 sm:p-8 border-b border-slate-100 flex justify-between items-center">
+                <h3 class="font-bold text-xl text-slate-900">YOLOv10 기반 중장비 사이클 타임 분석 알고리즘</h3>
+                <button onclick="closeModal('project-detail-2')" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div class="p-6 sm:p-8 space-y-4 text-sm text-slate-600 leading-relaxed">
+                <p class="font-semibold text-kmu-accent text-base">과제 목적 및 아키텍처</p>
+                <p>현장 건설 장비의 자원 활용성(Productivity Rate)은 육안 실사 측정이 주를 이뤄 비효율적이었습니다. 본 과업에서는 YOLOv10을 학습하여 중장비의 실시간 상태를 감지(Active, Idle)하여 비가시적 낭비 요소를 계측했습니다.</p>
+                
+                <p class="font-semibold text-kmu-accent text-base">구현 디테일</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>굴착기 및 덤프트럭 객체 학습 이미지 2,500장을 바운딩 박스 가공 및 증강</li>
+                    <li>CCTV 영상 피드에서 OpenCV의 DeepSORT 알고리즘을 기반으로 한 고유 장비 트래킹 ID 배정</li>
+                    <li>장비 버킷의 상하 이동 주기를 픽셀 변화율로 변환하여 실 사이클 타임(Cycle Time) 산출</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="project-detail-3" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div class="p-6 sm:p-8 border-b border-slate-100 flex justify-between items-center">
+                <h3 class="font-bold text-xl text-slate-900">BIM & 유전 알고리즘 기반 공정 최적화</h3>
+                <button onclick="closeModal('project-detail-3')" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div class="p-6 sm:p-8 space-y-4 text-sm text-slate-600 leading-relaxed">
+                <p class="font-semibold text-kmu-accent text-base">연구 핵심 프로세스</p>
+                <p>3D 가상 공간 설계 정보(BIM)에 시간(4D) 및 공사비(5D) 속성을 융합하고, 다차원 목적 함수를 최적화하기 위해 파이썬 내 유전 알고리즘(Genetic Algorithm) 패키지를 직접 개발했습니다.</p>
+                
+                <p class="font-semibold text-kmu-accent text-base">주요 통합 기법</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Revit API 연동을 통해 부재별 원자재 물량 산출 자동화</li>
+                    <li>공동 주택 모듈 조립 순서의 구조적 제약 조건 행렬 연산 설정</li>
+                    <li>공기 단축성과 비용 최소화 두 마리 토끼를 잡을 수 있는 Pareto 최적 프론티어 곡선 도출</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast & Notification -->
+    <div id="toast-message" class="fixed bottom-5 right-5 z-[200] transform translate-y-20 opacity-0 transition-all duration-300 max-w-sm w-full bg-slate-900 text-white p-4 rounded-xl shadow-2xl flex items-center space-x-3">
+        <div class="text-emerald-500 text-xl"><i class="fa-solid fa-circle-check"></i></div>
+        <div>
+            <p class="text-sm font-bold text-white">전송 완료</p>
+            <p class="text-xs text-slate-400">메시지가 저장되어 이승효 학생 및 CM 연구실 계정으로 접수되었습니다.</p>
+        </div>
+    </div>
+
+    <!-- Javascript 구현 -->
+    <script>
+        // 모바일 메뉴 제어
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 로컬 가상 파일 업로더 트리거 연동
+        function triggerImageUpload(type) {
+            if (type === 'hero') {
+                document.getElementById('hero-image-input').click();
+            } else if (type === 'sub') {
+                document.getElementById('sub-image-input').click();
+            }
+        }
+
+        // 선택된 파일을 감지하여 로컬 브라우저 메모리에 즉시 매핑
+        function handleImageFileSelected(inputElement, type) {
+            const file = inputElement.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const base64Url = e.target.result;
+                    
+                    // 뷰포트 내 즉시 업데이트 실행
+                    if (type === 'hero') {
+                        document.getElementById('profile-hero-img').src = base64Url;
+                        // 로컬 스토리지 보존 연동으로 새로고침 유지 보장
+                        localStorage.setItem('kmu_portfolio_hero_image', base64Url);
+                    } else if (type === 'sub') {
+                        document.getElementById('profile-sub-img').src = base64Url;
+                        localStorage.setItem('kmu_portfolio_sub_image', base64Url);
+                    }
+                    showToast("이미지 등록 성공", "승효님의 프로필 이미지가 로컬 메모리에 즉시 캐싱 및 렌더링되었습니다.");
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // 페이지 로드 시 이전에 저장된 로컬 이미지가 있는지 감지
+        window.onload = function() {
+            const savedHeroImg = localStorage.getItem('kmu_portfolio_hero_image');
+            const savedSubImg = localStorage.getItem('kmu_portfolio_sub_image');
+
+            if (savedHeroImg) {
+                document.getElementById('profile-hero-img').src = savedHeroImg;
+            }
+            if (savedSubImg) {
+                document.getElementById('profile-sub-img').src = savedSubImg;
+            }
+        }
+
+        // 아코디언 컴포넌트 토글 기능 (연구 계획서)
+        function toggleAccordion(accId) {
+            const accordionContent = document.getElementById(accId);
+            const accordionIcon = document.getElementById(accId + '-icon');
+            
+            // 다른 아코디언은 전부 닫기 위해 조회
+            const allContents = document.querySelectorAll('[id^="acc"]');
+            allContents.forEach(el => {
+                if (el.id !== accId && !el.id.includes('icon')) {
+                    el.classList.add('hidden');
+                }
+            });
+            const allIcons = document.querySelectorAll('[id$="-icon"]');
+            allIcons.forEach(ic => {
+                if (ic.id !== accId + '-icon') {
+                    ic.classList.remove('rotate-180');
+                }
+            });
+
+            // 해당 아코디언 온오프
+            if (accordionContent.classList.contains('hidden')) {
+                accordionContent.classList.remove('hidden');
+                accordionIcon.classList.add('rotate-180');
+            } else {
+                accordionContent.classList.add('hidden');
+                accordionIcon.classList.remove('rotate-180');
+            }
+        }
+
+        // 포트폴리오 프로젝트 필터 기법
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // 버튼 색상 활성화 상태 전환
+            buttons.forEach(btn => {
+                btn.className = "filter-btn px-4 py-2 text-xs font-semibold rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 transition";
+            });
+
+            const activeBtn = document.getElementById('btn-' + category);
+            if (activeBtn) {
+                activeBtn.className = "filter-btn px-4 py-2 text-xs font-semibold rounded-full bg-kmu-blue text-white transition shadow-md";
+            }
+
+            // 카드 리스트 온오프
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 모달 팝업 컨트롤러
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.getElementById(modalId).classList.add('flex');
+            document.body.style.overflow = 'hidden'; // 스크롤 차단
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.getElementById(modalId).classList.remove('flex');
+            document.body.style.overflow = 'auto'; // 스크롤 재개
+        }
+
+        // 다운로드 알림 시뮬레이션
+        function downloadAlert() {
+            showToast("연구 계획서 다운로드 완료", "이승효 연구원의 CM 및 AI 연구 주제 리서치 프로포절 PDF의 테스트 다운로드가 활성화되었습니다.");
+        }
+
+        // 토스트 팝업 띄우기 함수
+        function showToast(title, desc) {
+            const toast = document.getElementById('toast-message');
+            toast.querySelector('.text-white').textContent = title;
+            toast.querySelector('.text-slate-400').textContent = desc;
+            
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 4000);
+        }
+
+        // 컨택트 폼 서브밋 함수
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('contact-name').value;
+            const org = document.getElementById('contact-org').value;
+            const email = document.getElementById('contact-email').value;
+            const message = document.getElementById('contact-message').value;
+
+            // 로컬 스토리지 데이터 저장 모사
+            const inquiry = {
+                name, org, email, message, date: new Date().toISOString()
+            };
+            localStorage.setItem('kmu_cm_ai_inquiry', JSON.stringify(inquiry));
+
+            // 입력값 초기화
+            document.getElementById('contact-form').reset();
+
+            // 알림 팝업 전송 완료 메시지 표출
+            showToast("미팅 제안 발송 완료", `${name} 교수님/연구원님의 소중한 논의 메시지가 이승효 연구원 서버 데이터에 기록되었습니다.`);
+        }
+    </script>
+</body>
+</html>
